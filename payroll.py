@@ -32,7 +32,7 @@ def build_payroll_data() -> dict:
     # Employees
     payables.append(Secretary(p1, 101, 2, 25, 40))
     payables.append(Manager(p2, 102, 8, 8500, "IT"))
-    payables.append(ExecutiveManager(p3, 103, 10, 14500.0, "Operations"))
+    payables.append(ExecutiveManager(p3, 103, 10, 14500.0, "Operations",2500))
     payables.append(Salesperson(p4, 104, 4, 15000.0, 0.08))
 
     # Serialize + totals
@@ -56,3 +56,6 @@ def build_payroll_data() -> dict:
         "employee_count": total_employees,
         "total_gross": round(total_gross, 2),
     }
+
+print(build_payroll_data())
+print(Invoice.get_invoice_count())
